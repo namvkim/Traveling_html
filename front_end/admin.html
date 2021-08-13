@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css" />
+  </head>
+  <body>
+    <div class="admin_container">
+      <div class="admin_menu">
+        <div class="index_title">Admin page</div>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" class="btn"><i class="fas fa-bars"></i></label>
+        <div class="tab">
+          <a href="#" class="user item">
+            <div
+              class="img"
+              style="
+                background-image: url('https://thuthuatnhanh.com/wp-content/uploads/2018/07/anh-dai-dien-dep.jpg');
+              "
+            ></div>
+            <div class="name">Le son nam</div>
+          </a>
+          <div class="item space">/</div>
+          <a href="#" class="item signout">Sign out</a>
+        </div>
+      </div>
+      <div class="admin_tab">
+        <a href="#" class="logo"
+          ><img
+            src="https://www.shareicon.net/data/256x256/2015/09/20/643595_tree_512x512.png"
+            alt=""
+          />
+          <span>Traveling</span>
+        </a>
+        <button class="tab" onclick="openTab('dashboard')">Dashboard</button>
+        <button class="tab" onclick="openTab('destination')">
+          Destination
+        </button>
+        <button class="tab" onclick="openTab('schedule')">Schedule</button>
+        <button class="tab" onclick="openTab('user')">User</button>
+      </div>
+      <div class="admin_content">
+        <div id="dashboard" class="tab_item">
+          <h2>This is Dashboard</h2>
+        </div>
+        <div id="destination" class="tab_item" style="display: none">
+          <table>
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Vịnh Hạ Long</td>
+            </tr>
+          </table>
+        </div>
+        <div id="schedule" class="tab_item" style="display: none">
+          <table>
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>Place of departure</th>
+              <th>Destination</th>
+              <th>Detail</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Nam</td>
+              <td>Huế</td>
+              <td>Hà Nội</td>
+              <td>Huế - Quảng Nam - Đà Nẵng - Hà Nội</td>
+            </tr>
+          </table>
+        </div>
+        <div id="user" class="tab_item" style="display: none">
+          <table>
+            <tr>
+              <th>No.</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Adress</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Nam</td>
+              <td>0386005775</td>
+              <td>QuangTri</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openTab(tabName) {
+        var i;
+        var x = document.getElementsByClassName("tab_item");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
