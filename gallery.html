@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="pin_container">
+      <div
+        class="card card_small"
+        style="
+          background-image: url('https://images.squarespace-cdn.com/content/v1/53883795e4b016c956b8d243/1551438228969-H0FPV1FO3W5B0QL328AS/chup-anh-thuc-an-1.jpg');
+        "
+      >
+        <div class="cover">
+          <div class="title">
+            abc xysabc xysabc xysabc xysabc xysabc xysabc xys
+          </div>
+        </div>
+      </div>
+      <div class="card card_medium"></div>
+      <div class="card card_large"></div>
+      <div class="card card_medium"></div>
+      <div class="card card_small"></div>
+      <div class="card card_large"></div>
+      <div class="card card_medium"></div>
+      <div class="card card_small"></div>
+      <div class="card card_medium"></div>
+      <div class="card card_small"></div>
+      <div class="card card_medium"></div>
+      <div class="card card_large"></div>
+      <div class="card card_medium"></div>
+      <div class="card card_small"></div>
+      <div class="card card_medium"></div>
+      <div class="card card_large"></div>
+    </div>
+  </body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .pin_container {
+      width: 80vw;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 250px);
+      grid-auto-rows: 10px;
+      justify-content: center;
+
+      background-color: rgb(133, 189, 170);
+    }
+
+    .card {
+      padding: 0;
+      margin: 15px 10px;
+      border-radius: 16px;
+      background-color: rgb(187, 150, 150);
+      background-size: cover;
+      background-position: center;
+      grid-row-end: span 45;
+    }
+
+    .cover {
+      height: 100%;
+      width: 100%;
+      border-radius: 16px;
+      display: flex;
+      align-items: flex-end;
+      background: radial-gradient(
+        circle,
+        rgba(7, 2, 29, 0.275) 50%,
+        rgba(0, 0, 0, 1) 100%
+      );
+      opacity: 0;
+      cursor: zoom-in;
+    }
+
+    .cover:hover {
+      opacity: 1;
+      transition: 0.5s;
+    }
+
+    .cover:hover .title {
+      opacity: 1;
+      transition: 0.5s;
+    }
+    .title {
+      font-size: 20px;
+      width: 100%;
+      border-radius: 0 0 16px 16px;
+      padding: 10px;
+      color: rgb(0, 255, 106);
+      background-color: rgba(255, 255, 255, 0.568);
+      text-align: center;
+      opacity: 0;
+    }
+  </style>
+</html>
